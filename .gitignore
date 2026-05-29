@@ -1,0 +1,52 @@
+# Binarios
+*.exe
+*.exe~
+*.dll
+dist/
+
+# Go
+vendor/
+
+# Certificados y claves (nunca commitear)
+*.pem
+*.p12
+*.pfx
+*.key
+
+# Logs locales
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Docs internos Claude (no son parte del repo público)
+.claude/
+
+# Build artifacts Go
+build/
+
+# Archivos generados por testserver
+test.html
+test_signed.pdf
+*.blob
+
+# Installer — build artifacts (no commitear)
+installer/*.msi
+installer/*.wixpdb
+installer/*.cab
+installer/.wix/
+installer/banner.png
+installer/dialog.png
+
+# Installer — assets fuente SÍ se commitean:
+# installer/*.wxs  ✓
+# installer/*.rtf  ✓
+# installer/*.ico  ✓
+# installer/*.bmp  ✓
+# installer/*.html ✓
+# installer/*.py   ✓
+# installer/*.mjs  ✓
+
+# wrangler (artefactos locales de R2 upload)
+installer/.wrangler/

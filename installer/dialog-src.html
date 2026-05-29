@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 493px;
+    height: 312px;
+    overflow: hidden;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Contenedor raíz: dos columnas */
+  .layout {
+    width: 493px;
+    height: 312px;
+    display: flex;
+  }
+
+  /* ── Panel izquierdo: branding GDI ────────────────────────────────────── */
+  .panel-left {
+    width: 170px;
+    height: 312px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, #0d1338 0%, #0a1030 60%, #0e0e5c 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px 20px;
+  }
+
+  /* Dot grid sutil */
+  .panel-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(14,165,233,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  /* Línea de acento sky en el borde derecho */
+  .panel-left::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent 0%, #0ea5e9 25%, #0ea5e9 75%, transparent 100%);
+  }
+
+  /* Logo */
+  .logo-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .logo-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Wordmark GDI LATAM */
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    opacity: 0.70;
+  }
+  .wordmark .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: #0ea5e9;
+    flex-shrink: 0;
+  }
+
+  /* Nombre del producto */
+  .product-block {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .product-name {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1.0;
+    margin-bottom: 5px;
+  }
+  .product-version {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(14, 165, 233, 0.90);
+    text-transform: uppercase;
+  }
+
+  /* Pie: Tecnología Acuario */
+  .panel-footer {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+  }
+
+  /* ── Panel derecho: blanco para el wizard de Windows ─────────────────── */
+  .panel-right {
+    flex: 1;
+    height: 312px;
+    background: #ffffff;
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- Panel izquierdo: branding GDI -->
+  <div class="panel-left">
+    <div class="logo-wrap">
+      <img class="logo-img"
+           src="file:///C:/Users/santi/OneDrive/GDILatam/Operations/Comunicacion/01-Manual-Marca/GDI/logos/gdi-logo-3.png"
+           alt="GDI">
+      <div class="wordmark">
+        <span class="dot"></span>GDI LATAM
+      </div>
+    </div>
+
+    <div class="product-block">
+      <div class="product-name">FirmadorGDI</div>
+      <div class="product-version">v1.0</div>
+    </div>
+
+    <div class="panel-footer">Tecnología Acuario</div>
+  </div>
+
+  <!-- Panel derecho: blanco puro — WiX coloca su texto aquí -->
+  <div class="panel-right"></div>
+
+</div>
+</body>
+</html>
