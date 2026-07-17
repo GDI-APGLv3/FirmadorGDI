@@ -1,3 +1,5 @@
+> 🇬🇧 **English summary** — FirmadorGDI is the digital-signature service of **GDI (Gestión Documental Inteligente)**, written in **Go**: PDF signing workflows compliant with Argentina's Digital Signature Law 25.506. Part of GDI, an open-source (AGPL-3.0) document-management platform for local governments in Latin America. Live product: [gdilatam.com](https://www.gdilatam.com).
+
 # FirmadorGDI
 
 > Firma PDFs con tu token físico (eToken, ePass2003, YubiKey) desde el navegador.  
